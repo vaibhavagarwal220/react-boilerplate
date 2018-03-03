@@ -46,22 +46,10 @@ module.exports = (options) => ({
         use: 'file-loader',
       },
       {
-        test: /\.(jpg|png|gif)$/,
-        use: [
-          'file-loader',
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              progressive: true,
-              optimizationLevel: 7,
-              interlaced: false,
-              pngquant: {
-                quality: '65-90',
-                speed: 4,
-              },
-            },
-          },
-        ],
+        test: /.(jpe?g|png|gif)$/i,
+        loaders: [
+        'file-loader?name=[name].[ext]',
+        ]
       },
       {
         test: /\.html$/,
