@@ -33,7 +33,7 @@ export default function App() {
         titleTemplate="%s - Timetable Manager"
         defaultTitle="Timetable Manager"
       >
-        <meta name="description" content="A Timetable Manager for IIT Mandi" />
+        <meta name="description" content="A Timetable Generator for IIT Mandi" />
       </Helmet>
       <Header />
       <Switch>
